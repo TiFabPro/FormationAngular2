@@ -31,7 +31,7 @@ export class PrestationsService {
     // update item in Collection
     public update(item: Prestation, state: State) {
       console.log(item);
-      console.log("change de state");
+      console.log('change de state');
       item.state = state;
       console.log(item);
     }
