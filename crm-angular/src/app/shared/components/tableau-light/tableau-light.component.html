@@ -1,0 +1,25 @@
+<div class="table responsive">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope='col' *ngFor="let titre of headers">{{titre}}</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Permet de récupérer le contenu dans la balise-->
+        <ng-content></ng-content>
+
+      </tbody>
+    </table>
+
+  </div>
+<!-- Méthode pour passer d'autre contenu à un autre endroit de la page
+  <hr>
+  <ng-content select =".test"></ng-content>
+  <hr>
+  <ng-content select ="p"></ng-content>
+-->
+  <hr>
+
