@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PageClientsComponent } from './pages/page-clients/page-clients.component';
-import { ClientsRoutingModule } from './pages/clients-routing.module';
+import { ClientsRoutingModule } from './clients-routing.module';
 import { CommonModule } from '@angular/common';
+import { ClientsService } from './services/clients.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +11,8 @@ import { CommonModule } from '@angular/common';
   declarations: [PageClientsComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule
+    ClientsRoutingModule,
+    SharedModule
   ]
 })
 export class ClientsModule { }

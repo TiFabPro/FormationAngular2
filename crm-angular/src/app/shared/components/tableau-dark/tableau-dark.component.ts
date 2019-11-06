@@ -1,18 +1,16 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-tableau-light',
-  templateUrl: './tableau-light.component.html',
-  styleUrls: ['./tableau-light.component.scss'],
+  selector: 'app-tableau-dark',
+  templateUrl: './tableau-dark.component.html',
+  styleUrls: ['./tableau-dark.component.scss'],
   encapsulation: ViewEncapsulation.None // Suppression de l'encapsulation pour que les variables soients globales
 })
-export class TableauLightComponent implements OnInit {
+export class TableauDarkComponent implements OnInit {
 
   @Input() headers: string[];
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }

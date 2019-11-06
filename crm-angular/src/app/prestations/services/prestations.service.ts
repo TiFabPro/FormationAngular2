@@ -17,10 +17,10 @@ export class PrestationsService {
     // this.test = this.collection;
   }
 
-    // get Collection
-    public get collection() {
-      return this.pCollection;
-    }
+  // get Collection
+  public get collection() {
+    return this.pCollection;
+  }
 
     // set Collection
     public set collection(col: Prestation[]) {
