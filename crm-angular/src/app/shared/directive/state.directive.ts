@@ -14,6 +14,7 @@ export class StateDirective implements OnChanges {
   ngOnChanges() {
     console.log(this.appState);
     this.hostAttr = this.formatClass(this.appState);
+
   }
 
   private formatClass(state: any): string {

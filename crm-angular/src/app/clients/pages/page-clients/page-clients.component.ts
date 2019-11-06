@@ -14,6 +14,8 @@ export class PageClientsComponent implements OnInit {
   public collection: Client[];
   public headers: string[];
   public states = StateClient;
+  public title: string;
+  public label: string;
 
   constructor(
     private clientService: ClientsService
@@ -22,6 +24,9 @@ export class PageClientsComponent implements OnInit {
   ngOnInit() {
     this.collection = this.clientService.collection;
     this.headers = [ 'id',  'client',  'email',  'state'];
+
+    this.title = 'Clients';
+    this.label = 'Tous les clients';
   }
 
   public update(item: any, event: any) {

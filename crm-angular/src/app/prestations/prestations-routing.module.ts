@@ -3,7 +3,10 @@ import { PagePrestationsComponent } from './pages/page-prestations/page-prestati
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', component: PagePrestationsComponent }
+  { path: '',
+  component: PagePrestationsComponent,
+  data: { title: 'Prestations', label: 'Toutes les prestations' }
+  },
 ];
 
 @NgModule({
@@ -15,4 +18,5 @@ const appRoutes: Routes = [
     )
   ]
 })
+
 export class PrestationsRoutingModule { }
