@@ -17,6 +17,8 @@ export class PagePrestationsComponent implements OnInit {
   public states = State;
   public title: string;
   public label: string;
+  public labelbouton: string;
+  public routeBtn: string;
 
   // Verion antérieure angular6 cela a l'avantage de ne pas trier la liste d'enum
   // public State = Object.values(State);
@@ -30,6 +32,10 @@ export class PagePrestationsComponent implements OnInit {
   ngOnInit() {
     this.collection = this.prestationService.collection;
     this.headers = [ 'Client',  'Type',  'NbJours',  'TjmHT',  'Total',  'Total TTC',  'State'];
+    this.labelbouton = 'Ajouter un Prestataire';
+    this.routeBtn = 'add';
+
+
 
     // Récupération des datas de l'oberveur
     this.route.data.subscribe((donnees) => {

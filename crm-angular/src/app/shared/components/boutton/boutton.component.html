@@ -1,0 +1,6 @@
+<span>
+  <!-- href pour page externe qui va reload l'appli-->
+  <a *ngIf="href" [href]="href">{{ label }}</a>
+  <!-- href pour page interne qui va aller dans le routeur -->
+  <a *ngIf="route" [routerLink]="route">{{ label }}</a>
+</span>
