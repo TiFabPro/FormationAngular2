@@ -37,6 +37,11 @@ export class PrestationsService {
     console.log(item);
   }
   // add item in Collection
+  public add(item: Prestation) {
+    console.log('J ajoute une presta');
+    this.collection.push(new Prestation(item));
+  }
+
 
   // delete item in Collection
 
