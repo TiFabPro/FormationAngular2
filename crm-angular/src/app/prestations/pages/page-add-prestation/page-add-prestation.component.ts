@@ -25,10 +25,12 @@ export class PageAddPrestationComponent implements OnInit {
   }
 
   public add(item: any) {
-    this.prestationService.add(item);
+    this.prestationService.add(item).then( (res) => {
+    // res étant la réponse de l'api
     // this.router.navigate(['prestations']);
     // redirection relative par rapport à la route sur laquelle on est
     this.router.navigate(['../'], {relativeTo: this.route});
-  }
+  });
+}
 
 }

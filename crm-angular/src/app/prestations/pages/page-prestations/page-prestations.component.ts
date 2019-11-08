@@ -57,7 +57,10 @@ export class PagePrestationsComponent implements OnInit {
 
   public update(item: any, event: any) {
     // console.log(event.target.value);
-    this.prestationService.update(item, event.target.value);
+    this.prestationService.update(item, event.target.value).then( (res) => {
+      // Traiter reponse apu
+      item.state = event.target.value;
+    });
   }
 
   // ngOnDestroy() {
