@@ -1,1 +1,1 @@
-<p> {{ title }} - v.{{ version }}</p>
+<p *ngIf="version$ | async as version"> {{ title }} - v.{{ version }}</p>

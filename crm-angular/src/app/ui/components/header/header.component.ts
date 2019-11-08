@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PetitChatService } from 'src/app/shared/services/petit-chat.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { PetitChatService } from 'src/app/shared/services/petit-chat.service';
 export class HeaderComponent implements OnInit {
 
   public title = 'Chloe\'s app';
-  public version: number;
+  public version$: BehaviorSubject<number>;
   // public title2: string;
   // public title3: string;
 
@@ -20,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.version = this.pcs.version;
+    this.version$ = this.pcs.version$;
     // this.title3 = 'Nouveau titre 3';
   }
 

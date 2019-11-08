@@ -12,4 +12,4 @@
 
   <hr>
 
-  <button (click)="upgradeVersion()"> ++ version</button>
+  <button *ngIf="version$ | async as version" (click)="upgradeVersion()"> ++ version - {{ version }}</button>

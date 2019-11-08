@@ -1,1 +1,2 @@
-<p>Version {{ version }}</p>
+<!-- <p>Version {{ version$.value }}</p> -->
+<p *ngIf="version$ | async as version"> Version {{ version }}</p>
