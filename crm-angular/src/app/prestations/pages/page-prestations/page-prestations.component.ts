@@ -61,10 +61,15 @@ export class PagePrestationsComponent implements OnInit {
       // Traiter reponse apu
       item.state = event.target.value;
     });
+    // Si on passait par un observable (souscription au flux de donnée sinon il ne se passe rien)
+    // this.prestationService.update(item, event.target.value).subscribe( (res) => {
+    //   // Traiter reponse apu
+    //   item.state = event.target.value;
+    // });
   }
 
   // ngOnDestroy() {
-  //   this.sub.unsubscribe();
+  //   // this.sub.unsubscribe();
   // }
 
 

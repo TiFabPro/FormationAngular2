@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // the second parameter 'fr' is optional
@@ -26,6 +27,7 @@ registerLocaleData(localeFr, 'fr');
   ],
   imports: [
     // Import necessaire au demarrage de l'appplication
+    HttpClientModule,
     LoginModule,
     UiModule,
     BrowserModule,
